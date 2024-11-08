@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+  <style type="text/css">
+    .topnav {
+
+      background-color: #DCEEFF;
+      overflow: hidden;
+      height: 47px;
+      padding: 12px;
+    }
+
+    .bottomnav {
+
+      background-color: #E5E5E5;
+      overflow: hidden;
+      height: 41px;
+      padding: 5px;
+    }
+
+    a {
+      color: black;
+      padding-right: 20px;
+      font-weight: bold;
+    }
+
+    .thumb {
+      background-color: #DCEEFF;
+      padding: 12px;
+    }
+    
+    .card-1:{
+      border: 1px solid lightgray;
+      width: 260px;
+    }
+   
+    .card{
+      transition: .2s;
+    border: 1px solid lightgray;
+    width: 260px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 14px;
+    height: 100%;
+    }
+
+    .stf {
+      height: 500px;
+    }
+
+    .flex {
+      display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .img-card{
+      width: 100%;
+    border-radius: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="#">Home</a>
+    <a href="#">Feature</a>
+    <a href="#">Deals</a>
+    <a href="mycart.html">Wishlist</a>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="text"  placeholder="Search.."> <i class="fas fa-search"></i>
+
+  </div>
+  <div class="d-flex align-items-center thumb">
+    <!-- Icon -->
+    <a class="text-reset me-3" href="dashboard.html">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+
+    <!-- Notifications -->
+    <div class="dropdown">
+      <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button"
+        data-mdb-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+        <li>
+          <a class="dropdown-item" href="https://r.search.yahoo.com/_ylt=Awr1SUIvAZtkh6MUWiW7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1687908783/RO=10/RU=https%3a%2f%2fnews.google.com%2f/RK=2/RS=bvdvZf4MVB.hoXYyjHGM1qmpmTo-">Some news</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="https://www.google.co.in">Search web</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Avatar -->
+    <div class="dropdown">
+      <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+        role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.G3YB4DWoPBPCCLTskF7m2QHaHa&pid=Api&P=0&h=180" class="rounded-circle" height="25" width="25" alt="Akriti" loading="lazy" />
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+        <li>
+          <a class="dropdown-item" href="dashboard.html">My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottomnav">
+    <a class="active" href="#">Mobile & Accessories</a>
+    <a href="#">Computers & Tablets</a>
+    <a href="#">TV & Audios</a>
+    <a href="#">More</a>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <a href="login.html" class="btn btn-dark btn-sm
+			float-right ">Signin</a>
+    <a href="sign.html" class="btn btn-light btn-sm
+			float-right">Signup</a>
+
+  </div>
+  <div class="swiper myswiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/Main-Banner/LG/LG-Frost-Free-Side-By-Side-Refrigerators-Available-01.jpg"
+          alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/HomePage-Banner/Main-Banner/Smart%20watches/2023/Smart-Watches-Now-Available-At-Poorvika-05.jpg"
+          alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/HomePage-Banner/Main-Banner/Samsung/Jan-2023/s23-ultra-web-banner.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/Main-Banner/vivo/Vivo%20V27/Vivo-V27-Series-Coming-soon-now-at-poorvika.jpg"
+          alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/HomePage-Banner/Main-Banner/vivo/17/vivo-y100-avaialble-at-poorvika-Website.jpg"
+          alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="img-fluid"
+          src="https://img.poorvika.com/cdn-cgi/image/width=1900,height=600,quality=75/HomePage-Banner/Main-Banner/OnePlus/February/OnePlus-11-5G-Now-Available-At-Poorvika-website-without-offer.jpg"
+          alt="">
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <br>
+  <div class="bottomnav bg-dark">
+    <a class="active " style="color: white;" href="#">Home Appliences</a>
+    <a href="#" style="color: white;">Kitchen Appliences</a>
+  </div>
+  <div class="flex" >
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Voltas/AC/Voltas-SAC-1-Ton-5-Star-Inverter-Split-AC/Voltas-1-Ton-5-Star-Inverter-Split-AC-Front.jpg" />
+            <div class="card-body ">
+              <h6>Voltas SAS 5G coverter AC</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 2354 reviews</p>
+
+              <span class="h5 text-danger">₹20,499</span> &nbsp;&nbsp;
+              <del>₹27,999</del>
+              <p>Free delivery</p>
+              <button class="btn btn-danger" >ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Samsung/Refrigerator/Samsung-676-L-Frost-Free-Side-By-Side-Door-SpaceMax-Technology-Refrigerator-RS74R5101SLTL/Samsung-676-L-Frost-Free-Side-By-Side-Door-SpaceMax-Technology-Refrigerator-RS74R5101SLTL-01.jpg"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('earbuds2.webp');"></div> -->
+            <div class="card-body">
+              <h6>Samsung 676 L froster Refrigerator</h6>
+              <p><i class="fas fa-star text-danger"></i> 3.6 | 1034 reviews</p>
+              <span class="h5 text-danger">₹10,599</span> &nbsp;&nbsp;
+              <del>₹14,999</del>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Butterfly/Mixer-Grinder/Butterfly-Matchless-750W-Mixer-Grinder-Grey-4-Jars/Butterfly-Matchless-750W-Mixer-Grinder-Grey-4-Jars-01.jpg"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+            <div class="card-body">
+              <h6>Butterfly Matchless Mixer jars</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 9034 reviews</p>
+
+              <span class="h5 text-danger">₹19,499</span> &nbsp;&nbsp;
+              <del>₹24,999</del>
+              <button class="btn btn-danger">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Elica/Gas-Stove/Elica-773-CT-VETRO-SLIM-LINE-SPF-3-Burner-Gas-Stove/Elica-773-CT-VETRO-SLIM-LINE-SPF-3-Burner-Gas-Stove-front.jpg" />
+            <div class="card-body">
+              <h6>SPF 3 Gas Burner</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹4,699</span> &nbsp;&nbsp;
+              <del>₹8,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Prestige/Kettle/PKOSS-Electric-Kettle-1-5L/PKOSS-1-5-Ltr.jpg" />
+            <div class="card-body">
+              <h6>Prestige PKOSS electric kettle</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 1034 reviews</p>
+
+              <span class="h5 text-danger">₹5,699</span> &nbsp;&nbsp;
+              <del>₹8,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/FABER/Chimney/FABER-ACE-PRO-HC-PB-BK-90-Auto-Clean-Wall-Mounted-Chimney/FABER-ACE-PRO-HC-PB-BK-90-Auto-Clean-Wall-Mounted-Chimney-02.jpg" />
+            <div class="card-body">
+              <h6>BK 60 Clean Wall Chimeny</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹12,499</span> &nbsp;&nbsp;
+              <del>₹14,999</del>
+              <p>Free delivery</p>
+
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Home-Appliances/Prestige/FRY%20PAN/36759-Prestige-Alumunium-Omega-Select-Plus-Fry-Pan-280-Mm/36759-Prestige-Alumunium-Omega-Select-Plus-Fry-Pan-280-Mm-Front.jpg" />
+            <div class="card-body">
+              <h6> Prestige MYS 23 Pan</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹1,599</span> &nbsp;&nbsp;
+              <del>₹2,999</del>
+
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+            src="https://img.poorvika.com/HomePage-Banner/Side-Banner/Jan-2023/Offers/Bosch-Chimneys.jpg"
+               />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+            <div class="card-body">
+
+              <button class="btn btn-primary">Show more/ Save more</button>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="bottomnav bg-dark">
+    <a class="active " style="color: white;" href="#">Mobile & Accessories</a>
+    <a href="#" style="color: white;">Computers & Tablets</a>
+  </div>
+  <div class="flex">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Laptops/ASUS/ASUS-VivoBook-15-Intel-Core-i5-10th-Gen-Windows-11-Home-Laptop-X415JA-EK522WS-01/ASUS-VivoBook-15-Intel-Core-i5-10th-Gen-Windows-11-Home-Laptop-X415JA-EK522WS-01.jpg" />
+            <!-- <div class="thumbnail" style="background-image: url('https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_be843c79-656c-4745-b260-50e50cc8acd5_300x.png?v=1661854765');"></div> -->
+            <div class="card-body ">
+              <h6>Asus Limited Addition</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 2354 reviews</p>
+
+              <span class="h5 text-danger">₹10,499</span> &nbsp;&nbsp;
+              <del>₹7,999</del>
+              <p>Free delivery</p>
+              <button class="btn btn-danger">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+            src="https://dealntechcdn.b-cdn.net/wp-content/uploads/2021/06/Apple-iPhone-14-Pro-Max-represents.jpg"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('earbuds2.webp');"></div> -->
+            <div class="card-body">
+              <h6>Apple-iPhone-14-Pro-Max</h6>
+              <p><i class="fas fa-star text-danger"></i> 3.6 | 1034 reviews</p>
+              <span class="h5 text-danger">₹10,599</span> &nbsp;&nbsp;
+              <del>₹14,999</del>
+              <p>Free delivery</p>
+              <button class="btn btn-danger">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/g/z/p/-original-imaggj68yffchuwx.jpeg?q=70"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+            <div class="card-body">
+              <h6>Samsung-Galaxy-S21-Ultra-5G-Phantom-Navy</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 9034 reviews</p>
+
+              <span class="h5 text-danger">₹19,499</span> &nbsp;&nbsp;
+              <del>₹24,999</del>
+              <button class="btn btn-primary">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Mobiles/Oneplus/Oneplus-10R-5G/Oneplus-10R-5G-Forest-Green-Front-Back.jpg"
+              alt="" />
+            <div class="card-body">
+              <h6>One Plus 11 5G</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 2034 reviews</p>
+
+              <span class="h5 text-danger">₹34,699</span> &nbsp;&nbsp;
+              <del>₹38,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-primary">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Mobiles/Oneplus/Oneplus-11-5G/Oneplus-11-5G-Black-Front-Back.jpg" />
+            <div class="card-body">
+              <h6>One Plus 11 5G</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 2134 reviews</p>
+
+              <span class="h5 text-danger">₹54,699</span> &nbsp;&nbsp;
+              <del>₹58,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-primary">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Mobiles/Vivo/Vivo-Y75-5G/Vivo-Y75-5G-Glowing-Galaxy-back.jpg"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('earbuds2.webp');"></div> -->
+            <div class="card-body">
+              <h6>Vivo Y75 5G</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹18,599</span> &nbsp;&nbsp;
+              <del>₹20,999</del>
+
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-primary">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="img-card"
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Mobiles/Vivo/Vivo-Y100/vivo-y100-black-back-view.jpg"
+              alt="" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+            <div class="card-body">
+              <h6>Vivo Y100</h6>
+              <p><i class="fas fa-star text-danger"></i> 3.8 | 2134 reviews</p>
+
+              <span class="h5 text-danger">₹10,499</span> &nbsp;&nbsp;
+              <del>₹12,999</del>
+
+
+              
+
+              <button class="btn btn-primary">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-1">
+            <img class="img-card"
+            src="https://img.poorvika.com/HomePage-Banner/Side-Banner/Jan-2023/Offers/Redmi-note-12-5G.jpg" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="bottomnav bg-dark">
+    <a class="active " style="color: white;" href="#">Beauty Products</a>
+    <a href="#" style="color: white;">Makeup</a>
+  </div>
+  <div class="flex">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/kziqvm80/hair-dryer/o/9/y/professional-nhp-8215-nova-original-imagbgf8yywxpyhw.jpeg?q=70" />
+            <div class="card-body2">
+              <h6>Philips HP811 Hair dryer</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 2354 reviews</p>
+
+              <span class="h5 text-danger">₹999</span> &nbsp;&nbsp;
+              <del>1,999</del>
+              <p>Free delivery</p>
+              <button class="btn btn-danger">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Smart-Technology/Havells/Havells-HS4106-Hair-Straightener-Black/Havells-HS4106-Hair-Straightener-Black-1.jpg" />
+            <!-- <div class="thumbnail" style="background-image: url('earbuds2.webp');"></div> -->
+            <div class="card-body2">
+              <h6>Havells H811 Straightner</h6>
+              <p><i class="fas fa-star text-danger"></i> 3.6 | 1034 reviews</p>
+              <span class="h5 text-danger">₹2,599</span> &nbsp;&nbsp;
+              <del>₹4,999</del>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://img.poorvika.com/cdn-cgi/image/width=450,height=450,quality=50/1600_JPG/Personal-Health-care/Trimmer/Havells-3-in-1-Multi-Grooming-Kit-GS6555/Havells-3-in-1-Multi-Grooming-Kit-GS6555-01.jpg" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+            <div class="card-body2">
+              <h6>Combo set of Havells 34HP(2-in-one)</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 9034 reviews</p>
+
+              <span class="h5 text-danger">₹9,499</span> &nbsp;&nbsp;
+              <del>₹11,999</del>
+              <button class="btn btn-danger">ADD TO CART</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/xif0q/combo-kit/g/4/a/-original-imaggefnqqwnwff5.jpeg?q=70" />
+            <div class="card-body2">
+              <h6>Maybelline New York Fit-me kit</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹4,699</span> &nbsp;&nbsp;
+              <del>₹8,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/kwzap3k0/lipstick/j/t/n/16-non-transfer-insta-beauty-waterproof-longlast-sensational-original-imag9jby47tukyz5.jpeg?q=70" />
+            <div class="card-body2">
+              <h6>Combo BLUSHES Sale</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.2 | 1034 reviews</p>
+
+              <span class="h5 text-danger">₹1,699</span> &nbsp;&nbsp;
+              <del>₹4,999</del>
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/l0pm3680/combo-kit/q/a/l/all-day-kohl-kajal-long-stay-liquid-eyeliner-combo-8906074712387-original-imagcftpqdvvbrgj.jpeg?q=70" />
+            <div class="card-body2">
+              <h6>Lackme Ananya Combo </h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹1,499</span> &nbsp;&nbsp;
+              <del>₹4,999</del>
+              <p>Free delivery</p>
+
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/km3s1ow0/eye-shadow/a/k/e/18-naughty-nude-eyeshadow-palette-18-g-multicolor-s-f-r-original-imagf2n3mnjn8g8e.jpeg?q=70" />
+            <div class="card-body2">
+              <h6> Naughty Nude Eyeshadows</h6>
+              <p><i class="fas fa-star text-danger"></i> 4.6 | 234 reviews</p>
+
+              <span class="h5 text-danger">₹1,599</span> &nbsp;&nbsp;
+              <del>₹2,999</del>
+
+
+              <p>Free delivery</p>
+
+              <button class="btn btn-danger">ADD TO CART</button>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card stf">
+            <img src="https://img.poorvika.com/HomePage-Banner/Side-Banner/Jan-2023/Offers/Dyson-airwrap.jpg"
+              class="card-body" />
+            <!-- <div class="thumbnail" style="background-image: url('headphone.webp');"></div> -->
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <button class="btn btn-primary" id="btn" onclick="joined()">click</button>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+    let swiper = new Swiper('.myswiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      autoplay: true,
+      effect: 'fade'
+    });
+
+  </script>
+  
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+</body>
+
+</html>
